@@ -1,0 +1,9 @@
+body {
+  min-height: 100vh;
+  background: #222;
+}
+
+* {
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

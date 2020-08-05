@@ -1,0 +1,11 @@
+POST http://localhost:3001/api/blogs
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImdyaW1uaXIiLCJpZCI6IjVlZDYyMjdlNGFjZjkzNjY5NDBlODI3OCIsImlhdCI6MTU5MTE3OTM5M30.mKTk6ENMXPNSBkxj8O4o8Il1stDqbjTDHU3aKc9qFQs
+
+{
+      "title": "y",
+      "author": "Edsger W. Dijkstra",
+      "url":"http://www.cs.utexas.edu/~EWD/transcriptions/EWD08xx/EWD808.html",      
+      "likes": 12,
+      "user": "5ed6227e4acf9366940e8278"
+}
