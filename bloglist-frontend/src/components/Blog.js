@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import { newComment, likeBlog, removeBlog } from "../reducers/blogReducer";
 import { Button, Form } from "react-bootstrap";
 
@@ -11,6 +11,7 @@ const Blog = () => {
   const user = useSelector((store) => store.user);
   const blogs = useSelector((store) => store.blogs);
   const blog = blogs.find((blog) => blog.id === id);
+  const history = useHistory();
 
   const handleComment = async (event) => {
     event.preventDefault();
@@ -42,7 +43,10 @@ const Blog = () => {
         added by {blog.user.name}{" "}
         {user.username === blog.user.username && (
           <Button
-            onClick={() => dispatch(removeBlog(blog))}
+            onClick={() => {
+              dispatch(removeBlog(blog));
+              history.push("/");
+            }}
             variant="secondary"
             size="sm"
           >

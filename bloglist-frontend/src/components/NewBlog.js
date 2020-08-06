@@ -39,19 +39,19 @@ const NewBlog = ({ blogFormRef }) => {
       <h2>create new</h2>
       <Form onSubmit={handleNewBlog}>
         <Form.Group>
-          <Form.Label>author</Form.Label>
-          <Form.Control
-            id="author"
-            value={author}
-            onChange={({ target }) => setAuthor(target.value)}
-          />
-        </Form.Group>
-        <Form.Group>
           <Form.Label>title</Form.Label>
           <Form.Control
             id="title"
             value={title}
             onChange={({ target }) => setTitle(target.value)}
+          />
+        </Form.Group>
+        <Form.Group>
+          <Form.Label>author</Form.Label>
+          <Form.Control
+            id="author"
+            value={author}
+            onChange={({ target }) => setAuthor(target.value)}
           />
         </Form.Group>
         <Form.Group>
